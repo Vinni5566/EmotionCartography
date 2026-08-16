@@ -4,10 +4,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "./map-page.css";
+@import "./journal.css";
+@import "./reflections.css";
+@import "./timeline.css";
+
 @custom-variant dark (&:is(.dark *));
 
 :root { --paper:#ede6d4; --paper-light:#f5f0e5; --paper-deep:#ded3bc; --ink:#24312d; --ink-soft:#53615a; --forest:#466451; --cyan:#70c8c3; --gold:#c4a05c; --lavender:#8981a4; --terracotta:#b97857; --radius:0.2rem; --background:oklch(0.92 0.03 90); --foreground:oklch(0.24 0.03 155); --primary:oklch(0.43 0.08 155); --primary-foreground:oklch(0.98 0.01 90); --border:oklch(0.75 0.04 90); --ring:oklch(0.68 0.11 180); }
 @theme inline { --color-background:var(--background); --color-foreground:var(--foreground); --color-primary:var(--primary); --color-primary-foreground:var(--primary-foreground); --color-border:var(--border); --color-ring:var(--ring); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(163, 155, 133, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(163, 155, 133, 0.7);
+}
+
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:var(--ink); font-family:'DM Sans',sans-serif; }

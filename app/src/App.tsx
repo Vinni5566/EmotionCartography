@@ -18,6 +18,8 @@ function Router() {
   );
 }
 
+import { CartographyProvider } from "./lib/store";
+
 // NOTE: About Theme
 // - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
 //   to keep consistent foreground/background color across components
@@ -30,10 +32,12 @@ function App() {
         defaultTheme="light"
         // switchable
       >
-        <TooltipProvider>
-          <Toaster />
-          <Router />
-        </TooltipProvider>
+        <CartographyProvider>
+          <TooltipProvider>
+            <Toaster />
+            <Router />
+          </TooltipProvider>
+        </CartographyProvider>
       </ThemeProvider>
     </ErrorBoundary>
   );
