@@ -1,6 +1,7 @@
 # EmotionCartography
 
 > **Your journal is an archive. EmotionCartography turns it into a living map.**
+**[▶️ Watch the Demo](https://drive.google.com/file/d/1BWysK30xIIrvPKtLGlSZ19C6-USVZ0kR/view?usp=sharing)**
 
 EmotionCartography is a spatial journaling platform that transforms personal writing into a **dynamic semantic landscape**. Instead of reducing reflection to mood scores or chronological lists, it reveals recurring themes, relationships, and changes hidden across your own words—giving you a new way to explore how your writing evolves over time.
 
