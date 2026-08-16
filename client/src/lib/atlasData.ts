@@ -80,3 +80,45 @@ export const monthGrowth: Record<string, Record<string, number>> = {
 
 export const getCluster = (id: string) => clusters.find((cluster) => cluster.id === id) ?? clusters[0];
 export const getEntryCount = (id: string) => entries.filter((entry) => entry.clusterId === id).length;
+
+/* DEMO ARCHIVE · SYNTHETIC ENTRIES
+   These are illustrative, non-real records used only in the interactive field journal demo.
+   They are never presented as actual user data. */
+export const demoEntries: AtlasEntry[] = [
+  { id: "demo-01", text: "Mom asked again if I've applied for the internship.", date: "2026-01-04", clusterId: "family", language: "English", embedding: [0.4, 0.7, 0.3] },
+  { id: "demo-02", text: "I keep wondering whether I actually want this career.", date: "2026-01-11", clusterId: "career", language: "English", embedding: [0.6, 0.5, 0.4] },
+  { id: "demo-03", text: "Everyone seems to know where they're going except me.", date: "2026-01-18", clusterId: "identity", language: "English", embedding: [0.5, 0.6, 0.5] },
+  { id: "demo-04", text: "Called my friend after weeks. It felt strangely normal.", date: "2026-01-25", clusterId: "friends", language: "English", embedding: [0.3, 0.8, 0.4] },
+  { id: "demo-05", text: "Dad asked when I'm going to start earning.", date: "2026-02-02", clusterId: "expectations", language: "English", embedding: [0.7, 0.4, 0.6] },
+  { id: "demo-06", text: "I haven't slept properly this week.", date: "2026-02-08", clusterId: "rest", language: "English", embedding: [0.2, 0.9, 0.3] },
+  { id: "demo-07", text: "Spent the afternoon doing absolutely nothing and actually enjoyed it.", date: "2026-02-14", clusterId: "rest", language: "English", embedding: [0.3, 0.8, 0.5] },
+  { id: "demo-08", text: "The job listing looked exactly like what I said I wanted. I didn't apply.", date: "2026-02-20", clusterId: "career", language: "English", embedding: [0.6, 0.5, 0.3] },
+  { id: "demo-09", text: "I think I'm performing 'fine' for everyone around me.", date: "2026-02-26", clusterId: "identity", language: "English", embedding: [0.5, 0.6, 0.6] },
+  { id: "demo-10", text: "My sister graduated. I felt proud and something else I can't name.", date: "2026-03-04", clusterId: "family", language: "English", embedding: [0.4, 0.7, 0.4] },
+  { id: "demo-11", text: "I want to work on something I believe in, not just something impressive.", date: "2026-03-09", clusterId: "career", language: "English", embedding: [0.7, 0.4, 0.4] },
+  { id: "demo-12", text: "The comparison spiral started again while I was on my phone.", date: "2026-03-15", clusterId: "expectations", language: "English", embedding: [0.6, 0.5, 0.7] },
+  { id: "demo-13", text: "Hadn't seen my friends in months. The awkwardness dissolved in about two minutes.", date: "2026-03-21", clusterId: "friends", language: "English", embedding: [0.3, 0.7, 0.5] },
+  { id: "demo-14", text: "I read for two hours. Felt like water to a plant.", date: "2026-03-27", clusterId: "rest", language: "English", embedding: [0.2, 0.8, 0.4] },
+  { id: "demo-15", text: "Someone asked what I'm passionate about. I didn't know what to say.", date: "2026-04-02", clusterId: "identity", language: "English", embedding: [0.5, 0.5, 0.6] },
+  { id: "demo-16", text: "Dinner with the family was louder than I remembered. I was glad.", date: "2026-04-07", clusterId: "family", language: "English", embedding: [0.4, 0.8, 0.3] },
+  { id: "demo-17", text: "The mentor meeting helped. She said something I'll sit with for a while.", date: "2026-04-13", clusterId: "career", language: "English", embedding: [0.7, 0.5, 0.3] },
+  { id: "demo-18", text: "I said no to a plan I didn't want to go to. Didn't feel guilty. Progress.", date: "2026-04-19", clusterId: "identity", language: "English", embedding: [0.5, 0.6, 0.7] },
+  { id: "demo-19", text: "I keep chasing the version of myself that doesn't need approval.", date: "2026-04-25", clusterId: "expectations", language: "English", embedding: [0.6, 0.4, 0.7] },
+  { id: "demo-20", text: "Woke up without an alarm. The morning felt like it belonged to me.", date: "2026-05-01", clusterId: "rest", language: "English", embedding: [0.2, 0.9, 0.4] },
+  { id: "demo-21", text: "My friend got a promotion. I was genuinely happy and a little scared.", date: "2026-05-07", clusterId: "friends", language: "English", embedding: [0.4, 0.6, 0.6] },
+  { id: "demo-22", text: "The presentation went well. No one knows how close I came to cancelling it.", date: "2026-05-13", clusterId: "career", language: "English", embedding: [0.7, 0.4, 0.3] },
+  { id: "demo-23", text: "Ma called twice. I didn't pick up the first time. I should have.", date: "2026-05-19", clusterId: "family", language: "English", embedding: [0.4, 0.7, 0.5] },
+  { id: "demo-24", text: "I don't know if I'm doing the right thing, or just the expected thing.", date: "2026-05-25", clusterId: "expectations", language: "English", embedding: [0.6, 0.5, 0.8] },
+  { id: "demo-25", text: "Walked without headphones for the first time in months. Strange and good.", date: "2026-05-31", clusterId: "rest", language: "English", embedding: [0.3, 0.8, 0.3] },
+  { id: "demo-26", text: "I want a life that feels mine, not assembled from other people's expectations.", date: "2026-06-04", clusterId: "identity", language: "English", embedding: [0.5, 0.5, 0.8] },
+  { id: "demo-27", text: "An old friend reached out after two years. We talked for three hours.", date: "2026-06-08", clusterId: "friends", language: "English", embedding: [0.3, 0.7, 0.6] },
+  { id: "demo-28", text: "Dad smiled when I told him about the project. I hadn't expected that.", date: "2026-06-12", clusterId: "family", language: "English", embedding: [0.4, 0.8, 0.4] },
+  { id: "demo-29", text: "I almost quit but finished the thing. It exists now. That matters.", date: "2026-06-16", clusterId: "career", language: "English", embedding: [0.7, 0.5, 0.4] },
+  { id: "demo-30", text: "I think rest has been the hardest thing to let myself have.", date: "2026-06-20", clusterId: "rest", language: "English", embedding: [0.2, 0.9, 0.5] },
+  { id: "demo-31", text: "I don't know if I'm chasing this career because I want it, or want to be seen wanting it.", date: "2026-06-24", clusterId: "expectations", language: "English", embedding: [0.6, 0.4, 0.8] },
+  { id: "demo-32", text: "Something about the way my friends laughed made me feel like myself again.", date: "2026-06-27", clusterId: "friends", language: "English", embedding: [0.3, 0.7, 0.5] },
+  { id: "demo-33", text: "The hard conversation happened. We are still here. That means something.", date: "2026-06-30", clusterId: "family", language: "English", embedding: [0.4, 0.7, 0.6] },
+  { id: "demo-34", text: "I keep returning to the same question: what would I do if no one was watching?", date: "2026-07-03", clusterId: "identity", language: "English", embedding: [0.5, 0.5, 0.7] },
+  { id: "demo-35", text: "The deadline passed and I survived it. I always forget I survive them.", date: "2026-07-07", clusterId: "career", language: "English", embedding: [0.7, 0.5, 0.5] },
+];
+
