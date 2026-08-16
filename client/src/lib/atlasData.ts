@@ -49,11 +49,7 @@ const texts: Record<string, string[]> = {
 };
 
 const languages: AtlasEntry["language"][] = ["English", "English", "English", "Hinglish", "Hindi"];
-export const demoCorpusLabel = "DEMO JOURNAL · FICTIONAL DATA";
-export const newEntryPrompt = "What stayed with you today?";
-export const demoEntryText = "Today Dad asked whether I've started applying for internships yet. I told him I'm still figuring things out. Later I spent an hour comparing myself to people who already have offers.";
-
-export const entries: AtlasEntry[] = Object.entries(texts).flatMap(([clusterId, list]) => list.slice(0, 7).map((text, index) => ({
+export const entries: AtlasEntry[] = Object.entries(texts).flatMap(([clusterId, list]) => list.map((text, index) => ({
   id: `${clusterId}-${String(index + 1).padStart(2, "0")}`,
   text,
   date: `2026-${String((index % 6) + 1).padStart(2, "0")}-${String((index * 3 % 26) + 1).padStart(2, "0")}`,
@@ -72,17 +68,14 @@ export const connections: AtlasConnection[] = [
   { sourceClusterId: "identity", targetClusterId: "rest", strength: 0.56, entryIds: shared("identity", "rest"), route: "M 780 386 C 620 470, 460 450, 320 414", description: "Stillness gives the self room to change in 4 entries." },
 ];
 
-export const months = ["JUN", "JUL", "AUG"];
-export type MapHistoryState = "EARLY" | "MIDDLE" | "CURRENT";
-export const mapHistory: Record<MapHistoryState, { label: string; month: string; density: number; growth: Record<string, number>; routeStrength: number; note: string }> = {
-  EARLY: { label: "EARLY", month: "JUN", density: .58, growth: { career: .58, family: .36, friends: .3, identity: .22, rest: .26, expectations: .16 }, routeStrength: .42, note: "Career and comparison begin to surface." },
-  MIDDLE: { label: "MIDDLE", month: "JUL", density: .76, growth: { career: .74, family: .58, friends: .42, identity: .42, rest: .34, expectations: .38 }, routeStrength: .68, note: "Career and family become a shared route." },
-  CURRENT: { label: "CURRENT", month: "AUG", density: 1, growth: { career: .86, family: .74, friends: .54, identity: .72, rest: .56, expectations: .62 }, routeStrength: .86, note: "Identity becomes more prominent; the landscape widens." },
-};
+export const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN"];
 export const monthGrowth: Record<string, Record<string, number>> = {
-  JUN: { career: .58, family: .36, friends: .3, identity: .22, rest: .26, expectations: .16 },
-  JUL: { career: .74, family: .58, friends: .42, identity: .42, rest: .34, expectations: .38 },
-  AUG: { career: .86, family: .74, friends: .54, identity: .72, rest: .56, expectations: .62 },
+  JAN: { career: .75, family: .55, friends: .4, identity: .3, rest: .25, expectations: .15 },
+  FEB: { career: .82, family: .58, friends: .48, identity: .34, rest: .2, expectations: .18 },
+  MAR: { career: .7, family: .66, friends: .52, identity: .48, rest: .32, expectations: .28 },
+  APR: { career: .62, family: .73, friends: .63, identity: .57, rest: .44, expectations: .41 },
+  MAY: { career: .58, family: .7, friends: .68, identity: .66, rest: .58, expectations: .55 },
+  JUN: { career: .6, family: .76, friends: .72, identity: .75, rest: .7, expectations: .68 },
 };
 
 export const getCluster = (id: string) => clusters.find((cluster) => cluster.id === id) ?? clusters[0];
